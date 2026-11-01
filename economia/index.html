@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Economia & Negócios - Polo Econômico</title>
+  <meta name="description" content="Cobertura completa de Economia & Negócios no Polo Econômico.">
+  <style>
+    
+  :root {
+    --primary-blue: #0b2545;
+    --accent-blue: #1a73e8;
+    --ticker-bg: #0f172a;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --ads-bg: #f1f3f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  html, body { width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; }
+  .header-estatico-container { position: sticky; top: 0; z-index: 9999; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+  .top-bar-blue { background: var(--primary-blue); color: #ffffff; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .brand-container { display: flex; flex-direction: column; }
+  .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #ffffff; font-weight: 800; font-size: clamp(1.2rem, 4vw, 1.5rem); }
+  .brand-slogan { font-size: 0.72rem; color: #93c5fd; margin-top: 2px; }
+  .rotating-globe { width: 28px; height: 28px; border: 2px solid #60a5fa; border-radius: 50%; animation: spin-globe 10s linear infinite; background: radial-gradient(circle at 30% 30%, #3b82f6, #1e3a8a); flex-shrink: 0; }
+  @keyframes spin-globe { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+  .nav-links a { color: #e0e7ff; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+  .nav-links a:hover { color: #ffffff; }
+  .header-actions { display: flex; align-items: center; gap: 0.75rem; }
+  .btn-seguir { background: var(--accent-blue); color: #fff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+  .search-box input { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); padding: 0.35rem 0.6rem; border-radius: 4px; color: #fff; font-size: 0.8rem; width: 140px; }
+  .ticker-wrapper { background: var(--ticker-bg); overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--border-color); height: 34px; display: flex; align-items: center; }
+  .ticker-move { display: inline-block; white-space: nowrap; animation: ticker-scroll 45s linear infinite; }
+  .ticker-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 16px; font-size: 0.78rem; color: #9ca3af; border-right: 1px solid #1e293b; }
+  .ticker-symbol { font-weight: 700; color: #f8fafc; }
+  .ticker-up { color: #10b981; font-weight: 600; }
+  .ticker-down { color: #ef4444; font-weight: 600; }
+  @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ads-banner-leaderboard { max-width: 1240px; margin: 1.25rem auto; min-height: 90px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; padding: 10px; }
+  .ads-banner-infeed { max-width: 1240px; margin: 2.5rem auto; min-height: 180px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; }
+  .container-home { max-width: 1240px; margin: 1rem auto; padding: 0 1rem; }
+  .grid-hero { display: grid; grid-template-columns: 2.2fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); }
+  .hero-main { background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+  .hero-main img { width: 100%; height: 360px; object-fit: cover; border-radius: 6px; }
+  .hero-content { padding: 1rem 0; }
+  .hero-tag { color: var(--accent-blue); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+  .hero-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; color: var(--primary-blue); margin: 0.4rem 0; line-height: 1.25; }
+  .hero-title a { text-decoration: none; color: inherit; }
+  .sidebar-ultimas { border-left: 1px solid var(--border-color); padding-left: 1.25rem; }
+  .sidebar-title { font-size: 1rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.3rem; margin-bottom: 1rem; }
+  .sidebar-item { margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-color); }
+  .sidebar-item h4 a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; }
+  .editoria-section { margin-bottom: 3rem; }
+  .section-header { font-size: 1.25rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 1rem; border-left: 4px solid var(--accent-blue); padding-left: 0.6rem; display: flex; justify-content: space-between; align-items: center; }
+  .section-header a { font-size: 0.8rem; color: var(--accent-blue); text-decoration: none; }
+  .grid-4-colunas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .card-materia { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+  .card-materia img { width: 100%; height: 150px; object-fit: cover; }
+  .card-body { padding: 0.85rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .card-body h3 a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; }
+  footer { background: var(--primary-blue); color: #94a3b8; padding: 2.5rem 1rem 1.5rem 1rem; margin-top: 3rem; border-top: 4px solid var(--accent-blue); }
+  .footer-container { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .footer-col h5 { color: #ffffff; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.82rem; }
+  .footer-bottom { max-width: 1240px; margin: 1.25rem auto 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #94a3b8; }
+  @media (max-width: 900px) {
+    .top-bar-blue { flex-direction: column; align-items: flex-start; }
+    .grid-hero, .footer-container { grid-template-columns: 1fr; }
+    .grid-4-colunas { grid-template-columns: repeat(2, 1fr); }
+    .sidebar-ultimas { border-left: none; padding-left: 0; }
+  }
+  @media (max-width: 480px) { .grid-4-colunas { grid-template-columns: 1fr; } }
+
+    .container-editoria { max-width: 1240px; margin: 2rem auto; padding: 0 1rem; }
+    .titulo-editoria { font-size: 2rem; color: var(--primary-blue); margin-bottom: 1.5rem; border-left: 5px solid var(--accent-blue); padding-left: 0.75rem; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  
+  <div class="header-estatico-container">
+    <header class="top-bar-blue">
+      <div class="brand-container">
+        <a href="/" class="brand-logo">
+          <div class="rotating-globe"></div>
+          <span>Polo Econômico</span>
+        </a>
+        <span class="brand-slogan">Informações que moldam o país, a economia e o seu futuro.</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/economia/">Economia</a>
+        <a href="/automotivo/">Automotivo</a>
+        <a href="/politica/">Política</a>
+        <a href="/esportes/">Esportes</a>
+        <a href="/tecnologia/">Tecnologia</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-seguir" onclick="favoritarSite()">★ Seguir</button>
+        <div class="search-box">
+          <input type="text" placeholder="Buscar...">
+        </div>
+      </div>
+    </header>
+    
+  <div class="ticker-wrapper">
+    <div class="ticker-move">
+      <span class="ticker-item"><span class="ticker-symbol">IBOV</span> <span class="ticker-val">128.450</span> <span class="ticker-up">+0,75%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">PETR4</span> <span class="ticker-val">R$ 38,20</span> <span class="ticker-up">+1,12%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">VALE3</span> <span class="ticker-val">R$ 62,15</span> <span class="ticker-down">-0,45%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ITUB4</span> <span class="ticker-val">R$ 34,80</span> <span class="ticker-up">+0,30%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BBDC4</span> <span class="ticker-val">R$ 14,10</span> <span class="ticker-down">-0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BBAS3</span> <span class="ticker-val">R$ 27,90</span> <span class="ticker-up">+0,85%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">USDBRL</span> <span class="ticker-val">R$ 5,42</span> <span class="ticker-up">+0,22%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">EURBRL</span> <span class="ticker-val">R$ 5,88</span> <span class="ticker-down">-0,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">S&P 500</span> <span class="ticker-val">5.815 pts</span> <span class="ticker-up">+0,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">NASDAQ</span> <span class="ticker-val">18.510 pts</span> <span class="ticker-up">+0,65%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">DOW JONES</span> <span class="ticker-val">42.200 pts</span> <span class="ticker-down">-0,05%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BITCOIN</span> <span class="ticker-val">US$ 68.450</span> <span class="ticker-up">+2,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ETHEREUM</span> <span class="ticker-val">US$ 2.540</span> <span class="ticker-up">+1,80%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BRENT</span> <span class="ticker-val">US$ 74,30</span> <span class="ticker-down">-0,80%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">OURO</span> <span class="ticker-val">US$ 2.735</span> <span class="ticker-up">+0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ABEV3</span> <span class="ticker-val">R$ 12,40</span> <span class="ticker-down">-0,20%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">WEGE3</span> <span class="ticker-val">R$ 54,10</span> <span class="ticker-up">+1,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">RENT3</span> <span class="ticker-val">R$ 44,20</span> <span class="ticker-down">-0,60%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MGLU3</span> <span class="ticker-val">R$ 9,15</span> <span class="ticker-up">+3,20%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ELET3</span> <span class="ticker-val">R$ 39,50</span> <span class="ticker-up">+0,50%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">SUZB3</span> <span class="ticker-val">R$ 56,80</span> <span class="ticker-down">-0,30%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">JBSS3</span> <span class="ticker-val">R$ 35,40</span> <span class="ticker-up">+0,90%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">APPLE</span> <span class="ticker-val">US$ 231,40</span> <span class="ticker-up">+0,45%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MICROSOFT</span> <span class="ticker-val">US$ 428,10</span> <span class="ticker-down">-0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">NVIDIA</span> <span class="ticker-val">US$ 140,50</span> <span class="ticker-up">+2,80%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">AMAZON</span> <span class="ticker-val">US$ 186,20</span> <span class="ticker-up">+0,70%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">TESLA</span> <span class="ticker-val">US$ 218,50</span> <span class="ticker-down">-1,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">FTSE 100</span> <span class="ticker-val">8.240 pts</span> <span class="ticker-down">-0,25%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">DAX</span> <span class="ticker-val">19.450 pts</span> <span class="ticker-up">+0,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">NIKKEI 225</span> <span class="ticker-val">38.980 pts</span> <span class="ticker-up">+1,05%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">SOJA</span> <span class="ticker-val">US$ 1.020</span> <span class="ticker-up">+0,35%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MILHO</span> <span class="ticker-val">US$ 415</span> <span class="ticker-down">-0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MINÉRIO DE FERRO</span> <span class="ticker-val">US$ 104,50</span> <span class="ticker-up">+1,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">GASOLINA US</span> <span class="ticker-val">US$ 2,21</span> <span class="ticker-down">-0,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">PRATA</span> <span class="ticker-val">US$ 33,70</span> <span class="ticker-up">+0,95%</span></span>
+    </div>
+  </div>
+  </div>
+  <div class="ads-banner-leaderboard">[ ESPAÇO PUBLICITÁRIO - GOOGLE ADSENSE RESPONSIVO LEADERBOARD ]</div>
+  <main class="container-editoria">
+    <h1 class="titulo-editoria">Economia & Negócios</h1>
+    <div class="grid-4-colunas">
+        <div class="card-materia">
+          <img src="https://images.unsplash.com/photo-1634704784915-aacf363b021f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE5NjgwfDB8MXxzZWFyY2h8MXx8Y3J5cHRvY3VycmVuY3klMjBmaW5hbmNlJTIwZXhjaGFuZ2V8ZW58MHwwfHx8MTc5MzU3NjA2NXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Binance sofre saídas de US$ 3,64 bilhões após retomada de saques na corretora">
+          <div class="card-body">
+            <span class="hero-tag">Economia & Negócios</span>
+            <h3><a href="/economia/binance-registra-saidas-liquidas-de-us-364-bi.html">Binance sofre saídas de US$ 3,64 bilhões após retomada de saques na corretora</a></h3>
+            <span style="font-size:0.75rem; color:var(--text-muted); margin-top:0.5rem; display:block;">01 de November, 2026 às 20h36 GMT-3</span>
+          </div>
+        </div>
+        <div class="card-materia">
+          <img src="https://images.unsplash.com/photo-1524592714635-d77511a4834d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE5NjgwfDB8MXxzZWFyY2h8MXx8YWlycGxhbmUlMjBhdmlhdGlvbiUyMGZ1ZWx8ZW58MHwwfHx8MTc5MzU3NTk5OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Petrobras reajusta preço do querosene de aviação em 7,2% em novembro">
+          <div class="card-body">
+            <span class="hero-tag">Economia & Negócios</span>
+            <h3><a href="/economia/petrobras-aumenta-preco-do-querosene-de-aviac.html">Petrobras reajusta preço do querosene de aviação em 7,2% em novembro</a></h3>
+            <span style="font-size:0.75rem; color:var(--text-muted); margin-top:0.5rem; display:block;">01 de November, 2026 às 20h33 GMT-3</span>
+          </div>
+        </div>
+        <div class="card-materia">
+          <img src="https://images.unsplash.com/photo-1584953528653-503bb1c9dbf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE5NjgwfDB8MXxzZWFyY2h8MXx8c3VwZXJtYXJrZXQlMjBwYXltZW50JTIwZm9vZHxlbnwwfDB8fHwxNzkzNTc0Mjc1fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Novas regras do vale-alimentação e refeição entram em vigor; veja o que muda">
+          <div class="card-body">
+            <span class="hero-tag">Economia & Negócios</span>
+            <h3><a href="/economia/recebimento-de-vales-alimentacao-e-refeicao-m.html">Novas regras do vale-alimentação e refeição entram em vigor; veja o que muda</a></h3>
+            <span style="font-size:0.75rem; color:var(--text-muted); margin-top:0.5rem; display:block;">01 de November, 2026 às 20h06 GMT-3</span>
+          </div>
+        </div></div></main>
+  <div class="ads-banner-infeed">[ ESPAÇO PUBLICITÁRIO - GOOGLE ADSENSE RESPONSIVO ]</div>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong style="color:#fff; font-size:1.25rem; display:block; margin-bottom:0.3rem;">Polo Econômico</strong>
+        <p>Informações que moldam o país, a economia e o seu futuro.</p>
+        <p style="margin-top:0.8rem; font-size:0.78rem; color:#94a3b8;">O Polo Econômico é um portal independente dedicado a cobrir os fatos mais relevantes sobre mercados, governo, tecnologia, mobilidade e esportes.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Editorias</h5>
+        <ul>
+          <li><a href="/economia/">Economia</a></li>
+          <li><a href="/automotivo/">Automotivo</a></li>
+          <li><a href="/politica/">Política</a></li>
+          <li><a href="/esportes/">Esportes</a></li>
+          <li><a href="/tecnologia/">Tecnologia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="/contato.html">Fale Conosco</a></li>
+          <li><a href="/expediente.html">Expediente</a></li>
+          <li><a href="/anuncie.html">Anuncie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal & Transparência</h5>
+        <ul>
+          <li><a href="/politica-de-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="/termos-de-uso.html">Termos de Uso</a></li>
+          <li><a href="/sitemap.xml">Mapa do Site (Sitemap)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Polo Econômico. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+    function favoritarSite() {
+      alert('Pressione ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + ' + D para favoritar o Polo Econômico!');
+    }
+  </script>
+</body>
+</html>
