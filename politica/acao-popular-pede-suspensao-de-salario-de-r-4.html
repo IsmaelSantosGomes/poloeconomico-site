@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ação Popular Questiona Salário de Flávio Bolsonaro no Senado Federal - Polo Econômico</title>
+  <meta name="description" content="Ação Popular Questiona Salário de Flávio Bolsonaro no Senado Federal">
+  <style>
+    
+  :root {
+    --primary-blue: #0b2545;
+    --accent-blue: #1a73e8;
+    --ticker-bg: #0f172a;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --ads-bg: #f1f3f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  html, body { width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; }
+  .header-estatico-container { position: sticky; top: 0; z-index: 9999; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+  .top-bar-blue { background: var(--primary-blue); color: #ffffff; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .brand-container { display: flex; flex-direction: column; }
+  .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #ffffff; font-weight: 800; font-size: clamp(1.2rem, 4vw, 1.5rem); }
+  .brand-slogan { font-size: 0.72rem; color: #93c5fd; margin-top: 2px; }
+  .rotating-globe { width: 28px; height: 28px; border: 2px solid #60a5fa; border-radius: 50%; animation: spin-globe 10s linear infinite; background: radial-gradient(circle at 30% 30%, #3b82f6, #1e3a8a); flex-shrink: 0; }
+  @keyframes spin-globe { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+  .nav-links a { color: #e0e7ff; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+  .nav-links a:hover { color: #ffffff; }
+  .header-actions { display: flex; align-items: center; gap: 0.75rem; }
+  .btn-seguir { background: var(--accent-blue); color: #fff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+  .search-box input { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); padding: 0.35rem 0.6rem; border-radius: 4px; color: #fff; font-size: 0.8rem; width: 140px; }
+  .ticker-wrapper { background: var(--ticker-bg); overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--border-color); height: 34px; display: flex; align-items: center; }
+  .ticker-move { display: inline-block; white-space: nowrap; animation: ticker-scroll 45s linear infinite; }
+  .ticker-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 16px; font-size: 0.78rem; color: #9ca3af; border-right: 1px solid #1e293b; }
+  .ticker-symbol { font-weight: 700; color: #f8fafc; }
+  .ticker-up { color: #10b981; font-weight: 600; }
+  .ticker-down { color: #ef4444; font-weight: 600; }
+  @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ads-banner-leaderboard { max-width: 1240px; margin: 1.25rem auto; min-height: 90px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; padding: 10px; }
+  .ads-banner-infeed { max-width: 1240px; margin: 2.5rem auto; min-height: 180px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; }
+  .container-home { max-width: 1240px; margin: 1rem auto; padding: 0 1rem; }
+  .grid-hero { display: grid; grid-template-columns: 2.2fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); }
+  .hero-main { background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+  .hero-main img { width: 100%; height: 360px; object-fit: cover; border-radius: 6px; }
+  .hero-content { padding: 1rem 0; }
+  .hero-tag { color: var(--accent-blue); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+  .hero-title { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; color: var(--primary-blue); margin: 0.4rem 0; line-height: 1.25; }
+  .hero-title a { text-decoration: none; color: inherit; }
+  .sidebar-ultimas { border-left: 1px solid var(--border-color); padding-left: 1.25rem; }
+  .sidebar-title { font-size: 1rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.3rem; margin-bottom: 1rem; }
+  .sidebar-item { margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-color); }
+  .sidebar-item h4 a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; }
+  .grid-4-colunas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .card-materia { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+  .card-materia img { width: 100%; height: 150px; object-fit: cover; }
+  .card-body { padding: 0.85rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .card-body h3 a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; }
+  footer { background: var(--primary-blue); color: #94a3b8; padding: 2.5rem 1rem 1.5rem 1rem; margin-top: 3rem; border-top: 4px solid var(--accent-blue); }
+  .footer-container { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .footer-col h5 { color: #ffffff; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.82rem; }
+  .footer-bottom { max-width: 1240px; margin: 1.25rem auto 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #94a3b8; }
+  @media (max-width: 900px) {
+    .top-bar-blue { flex-direction: column; align-items: flex-start; }
+    .grid-hero, .footer-container { grid-template-columns: 1fr; }
+    .grid-4-colunas { grid-template-columns: repeat(2, 1fr); }
+    .sidebar-ultimas { border-left: none; padding-left: 0; }
+  }
+  @media (max-width: 480px) { .grid-4-colunas { grid-template-columns: 1fr; } }
+
+    .container-materia { max-width: 900px; margin: 2rem auto; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 2.5rem; }
+    .tag-editoria { color: var(--accent-blue); font-weight: bold; text-transform: uppercase; font-size: 0.75rem; }
+    .titulo-materia { font-size: 2.2rem; color: var(--primary-blue); margin: 0.5rem 0; line-height: 1.25; }
+    .meta-data { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); }
+    .destaque-img img { width: 100%; height: 380px; object-fit: cover; border-radius: 6px; }
+    .credito-img { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; margin-bottom: 1.5rem; }
+    article { font-size: 1.05rem; color: var(--text-main); }
+    article p { margin-bottom: 1.25rem; }
+    article h2 { color: var(--primary-blue); margin: 1.5rem 0 0.75rem 0; }
+  </style>
+</head>
+<body>
+  
+  <div class="header-estatico-container">
+    <header class="top-bar-blue">
+      <div class="brand-container">
+        <a href="/" class="brand-logo">
+          <div class="rotating-globe"></div>
+          <span>Polo Econômico</span>
+        </a>
+        <span class="brand-slogan">Informações que moldam o país, a economia e o seu futuro.</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/economia/">Economia</a>
+        <a href="/automotivo/">Automotivo</a>
+        <a href="/politica/">Política</a>
+        <a href="/esportes/">Esportes</a>
+        <a href="/tecnologia/">Tecnologia</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-seguir" onclick="favoritarSite()">★ Seguir</button>
+        <div class="search-box">
+          <input type="text" placeholder="Buscar...">
+        </div>
+      </div>
+    </header>
+    
+  <div class="ticker-wrapper">
+    <div class="ticker-move">
+      <span class="ticker-item"><span class="ticker-symbol">IBOV</span> <span class="ticker-val">128.450</span> <span class="ticker-up">+0,75%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">PETR4</span> <span class="ticker-val">R$ 38,20</span> <span class="ticker-up">+1,12%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">VALE3</span> <span class="ticker-val">R$ 62,15</span> <span class="ticker-down">-0,45%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ITUB4</span> <span class="ticker-val">R$ 34,80</span> <span class="ticker-up">+0,30%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BBDC4</span> <span class="ticker-val">R$ 14,10</span> <span class="ticker-down">-0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BBAS3</span> <span class="ticker-val">R$ 27,90</span> <span class="ticker-up">+0,85%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">USDBRL</span> <span class="ticker-val">R$ 5,42</span> <span class="ticker-up">+0,22%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">EURBRL</span> <span class="ticker-val">R$ 5,88</span> <span class="ticker-down">-0,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">S&P 500</span> <span class="ticker-val">5.815 pts</span> <span class="ticker-up">+0,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">NASDAQ</span> <span class="ticker-val">18.510 pts</span> <span class="ticker-up">+0,65%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">DOW JONES</span> <span class="ticker-val">42.200 pts</span> <span class="ticker-down">-0,05%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BITCOIN</span> <span class="ticker-val">US$ 68.450</span> <span class="ticker-up">+2,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ETHEREUM</span> <span class="ticker-val">US$ 2.540</span> <span class="ticker-up">+1,80%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BRENT</span> <span class="ticker-val">US$ 74,30</span> <span class="ticker-down">-0,80%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">OURO</span> <span class="ticker-val">US$ 2.735</span> <span class="ticker-up">+0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ABEV3</span> <span class="ticker-val">R$ 12,40</span> <span class="ticker-down">-0,20%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">WEGE3</span> <span class="ticker-val">R$ 54,10</span> <span class="ticker-up">+1,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">RENT3</span> <span class="ticker-val">R$ 44,20</span> <span class="ticker-down">-0,60%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MGLU3</span> <span class="ticker-val">R$ 9,15</span> <span class="ticker-up">+3,20%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">ELET3</span> <span class="ticker-val">R$ 39,50</span> <span class="ticker-up">+0,50%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">SUZB3</span> <span class="ticker-val">R$ 56,80</span> <span class="ticker-down">-0,30%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">JBSS3</span> <span class="ticker-val">R$ 35,40</span> <span class="ticker-up">+0,90%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">APPLE</span> <span class="ticker-val">US$ 231,40</span> <span class="ticker-up">+0,45%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MICROSOFT</span> <span class="ticker-val">US$ 428,10</span> <span class="ticker-down">-0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">NVIDIA</span> <span class="ticker-val">US$ 140,50</span> <span class="ticker-up">+2,80%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">AMAZON</span> <span class="ticker-val">US$ 186,20</span> <span class="ticker-up">+0,70%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">TESLA</span> <span class="ticker-val">US$ 218,50</span> <span class="ticker-down">-1,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">FTSE 100</span> <span class="ticker-val">8.240 pts</span> <span class="ticker-down">-0,25%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">DAX</span> <span class="ticker-val">19.450 pts</span> <span class="ticker-up">+0,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">NIKKEI 225</span> <span class="ticker-val">38.980 pts</span> <span class="ticker-up">+1,05%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">SOJA</span> <span class="ticker-val">US$ 1.020</span> <span class="ticker-up">+0,35%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MILHO</span> <span class="ticker-val">US$ 415</span> <span class="ticker-down">-0,15%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">MINÉRIO DE FERRO</span> <span class="ticker-val">US$ 104,50</span> <span class="ticker-up">+1,10%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">GASOLINA US</span> <span class="ticker-val">US$ 2,21</span> <span class="ticker-down">-0,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">PRATA</span> <span class="ticker-val">US$ 33,70</span> <span class="ticker-up">+0,95%</span></span>
+    </div>
+  </div>
+  </div>
+  <div class="ads-banner-leaderboard">[ ESPAÇO PUBLICITÁRIO - GOOGLE ADSENSE RESPONSIVO LEADERBOARD ]</div>
+  <main class="container-materia">
+    <span class="tag-editoria">Política, Governo & Sociedade</span>
+    <h1 class="titulo-materia">Ação Popular Questiona Salário de Flávio Bolsonaro no Senado Federal</h1>
+    <div class="meta-data">Por Redação Polo Econômico | Publicado em: 01 de November, 2026 às 22h20 GMT-3</div>
+    <div class="destaque-img"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE5NjgwfDB8MXxzZWFyY2h8MXx8c2VuYXRlJTIwcG9saXRpY3MlMjBqdXN0aWNlfGVufDB8MHx8fDE3OTM1ODI0MDJ8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Ação Popular Questiona Salário de Flávio Bolsonaro no Senado Federal"><p class="credito-img">Foto: Unsplash</p></div>
+    <article><p>Uma nova frente de desgaste político e institucional foi aberta no Congresso Nacional com o protocolo de uma Ação Popular que solicita a suspensão cautelar do subsídio parlamentar de Flávio Bolsonaro (PL-RJ). O parlamentar recebe atualmente vencimentos brutos na ordem de R$ 46 mil mensais como membro do Senado Federal. A iniciativa jurídica, ancorada em preceitos de moralidade administrativa e lesividade presumida aos cofres públicos, coloca novamente sob os holofotes a relação entre desempenho parlamentar, risco de compliance institucional e custo orçamentário das representações legislativas federais.</p>
+
+<h2>Fundamentos jurídicos e a tese da lesividade ao erário</h2>
+
+<p>A peça jurídica fundamenta-se precipuamente no artigo 37 da Constituição Federal, que baliza a administração pública direta e indireta pelos princípios de legalidade, impessoalidade, moralidade, publicidade e eficiência. Os proponentes sustentam que o pagamento integral de subsídios a parlamentares envolvidos em reiteradas investigações e crises de legitimidade — incluindo episódios de possível ausência injustificada e viagens ao exterior — agride o núcleo duro da moralidade administrativa.</p>
+
+<p>Entre os principais argumentos expostos na ação, destacam-se:</p>
+<ul>
+    <li><strong>Violação ao princípio da moralidade:</strong> Argumenta-se que a continuidade dos desembolsos regulares pela União atenta contra o decoro esperado para o exercício financiado pelo contribuinte, mormente diante de apurações em andamento sobre o uso indevido de recursos.</li>
+    <li><strong>Risco de dano irreparável ao erário:</strong> Sustenta-se que valores pagos a título de remuneração política possuem caráter alimentar e dificilmente são revertidos ou ressarcidos ao Tesouro em caso de posterior condenação transitada em julgado.</li>
+    <li><strong>Suspensão preventiva:</strong> A cautelar visa resguardar o erário até o julgamento do mérito de ações correlatas e sindicâncias sobre o cumprimento integral dos deveres do mandato.</li>
+</ul>
+
+<h2>O impacto fiscal e a métrica de remuneração no Legislativo</h2>
+
+<p>Do ponto de vista orçamentário, a remuneração dos congressistas federais — reajustada de forma escalonada até atingir o teto de R$ 46,3 mil — compõe uma estrutura de custos que vai muito além do subsídio bruto. O impacto econômico por parlamentar é ampliado expressivamente pela cota para o exercício da atividade parlamentar (CEAPS), verbas de gabinete para contratação de assessores e benefícios indiretos, gerando um custo operacional médio que pode ultrapassar centenas de milhares de reais ao mês por gabinete.</p>
+
+<p>Analistas do setor público apontam que, embora o corte pontual do subsídio tenha reflexo fiscal residual diante do Produto Interno Bruto (PIB) ou do orçamento global do Senado, seu impacto simbólico e precedente jurisprudencial são profundos. Uma eventual acolhida da tutela de urgência pela Justiça Federal subverteria a praxe da imunidade e da intangibilidade salarial parlamentar, transferindo ao Poder Judiciário o poder de arbitrar sobre a legitimidade da remuneração de mandatários eleitos antes do trânsito em julgado de eventuais cassações legislativas.</p>
+
+<h2>Implicações macroeconômicas e dinâmica no Congresso</h2>
+
+<p>O endurecimento das pressões judiciais contra figuras centrais da oposição, como Flávio Bolsonaro, adiciona volatilidade ao ambiente institucional em Brasília. O tensionamento ocorre em um momento delicado para a agenda de governabilidade e para a tramitação de matérias fiscais cruciais no Senado Federal, incluindo debates sobre desonerações, contenção de gastos obrigatórios e a regulamentação final da Reforma Tributária.</p>
+
+<p>Historicamente, a judicialização de mandatos e prerrogativas executivas de lideranças do Congresso eleva o custo de transação política:</p>
+<ul>
+    <li><strong>Obstrução legislativa:</strong> Bancadas de oposição tendem a intensificar estratégias regimentais de travamento de votações prioritárias para o Ministério da Fazenda.</li>
+    <li><strong>Elevação do risco de governabilidade:</strong> A polarização afasta discussões técnicas de equilíbrio fiscal do centro do debate, subordinando a pauta econômica a confrontos judiciais e corporativos.</li>
+    <li><strong>Pressão sobre a cúpula do Senado:</strong> A Mesa Diretora é compelida a reagir corporativamente para preservar a autonomia do Legislativo, tensionando as relações com o Judiciário.</li>
+</ul>
+
+<p>Juristas consultados avaliam que as barreiras processuais para a concessão de liminar suspendendo o subsídio são elevadas, visto que a remuneração decorre do exercício do mandato eletivo diplomação pelo Tribunal Superior Eleitoral. Contudo, a movimentação atua como termômetro de isolamento e desgaste reputacional, cujos desdobramentos retroalimentam as incertezas políticas que o mercado financeiro monitora atentamente nos corredores de Brasília.</p></article>
+  </main>
+  <div class="ads-banner-infeed">[ ESPAÇO PUBLICITÁRIO - GOOGLE ADSENSE RESPONSIVO PRÉ-RODAPÉ ]</div>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <strong style="color:#fff; font-size:1.25rem; display:block; margin-bottom:0.3rem;">Polo Econômico</strong>
+        <p>Informações que moldam o país, a economia e o seu futuro.</p>
+        <p style="margin-top:0.8rem; font-size:0.78rem; color:#94a3b8;">O Polo Econômico é um portal independente dedicado a cobrir os fatos mais relevantes sobre mercados, governo, tecnologia, mobilidade e esportes.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Editorias</h5>
+        <ul>
+          <li><a href="/economia/">Economia</a></li>
+          <li><a href="/automotivo/">Automotivo</a></li>
+          <li><a href="/politica/">Política</a></li>
+          <li><a href="/esportes/">Esportes</a></li>
+          <li><a href="/tecnologia/">Tecnologia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="/contato.html">Fale Conosco</a></li>
+          <li><a href="/expediente.html">Expediente</a></li>
+          <li><a href="/anuncie.html">Anuncie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal & Transparência</h5>
+        <ul>
+          <li><a href="/politica-de-privacidade.html">Política de Privacidade</a></li>
+          <li><a href="/termos-de-uso.html">Termos de Uso</a></li>
+          <li><a href="/sitemap.xml">Mapa do Site (Sitemap)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Polo Econômico. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script>
+    function favoritarSite() {
+      alert('Pressione ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + ' + D para favoritar o Polo Econômico!');
+    }
+  </script>
+</body>
+</html>
