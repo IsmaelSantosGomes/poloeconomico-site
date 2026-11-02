@@ -12,13 +12,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools
-
       - name: Deploy to Firebase Hosting
-        env:
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_POLO_ECONOMICO }}
-        run: |
-          echo "$FIREBASE_SERVICE_ACCOUNT" > service_account.json
-          export GOOGLE_APPLICATION_CREDENTIALS="service_account.json"
-          firebase deploy --non-interactive --project polo-economico
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_POLO_ECONOMICO }}"
+          channelId: live
+          projectId: polo-economico
