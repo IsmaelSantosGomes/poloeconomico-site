@@ -6,35 +6,30 @@
   <title>Novas regras para vales-alimentação e refeição entram em vigor; entenda o que muda - Polo Econômico</title>
   <meta name="description" content="Novas regras para vales-alimentação e refeição entram em vigor; entenda o que muda">
   <style>
-    :root {
-      --primary-blue: #0b2545;
-      --accent-blue: #1a73e8;
-      --ticker-bg: #0f172a;
-      --bg-color: #f8f9fa;
-      --card-bg: #ffffff;
-      --text-main: #1f2937;
-      --text-muted: #6b7280;
-      --border-color: #e5e7eb;
-      --ads-bg: #f1f3f4;
+    :root { 
+      --primary-blue: #0b2545; 
+      --accent-blue: #1a73e8; 
+      --ticker-bg: #0f172a; 
+      --bg-color: #f8f9fa; 
+      --card-bg: #ffffff; 
+      --text-main: #1f2937; 
+      --text-muted: #6b7280; 
+      --border-color: #e5e7eb; 
+      --ads-bg: #f1f3f4; 
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     html, body { width: 100%; overflow-x: hidden; background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; }
-    .header-estatico-container { position: sticky; top: 0; z-index: 9999; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
-    .top-bar-blue { background: var(--primary-blue); color: #ffffff; padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .brand-container { display: flex; flex-direction: column; }
-    .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #ffffff; font-weight: 800; font-size: clamp(1.2rem, 4vw, 1.5rem); letter-spacing: -0.3px; }
-    .brand-slogan { font-size: 0.72rem; color: #93c5fd; font-weight: 400; margin-top: 2px; letter-spacing: 0.2px; }
-    .rotating-globe { width: 28px; height: 28px; border: 2px solid #60a5fa; border-radius: 50%; position: relative; animation: spin-globe 10s linear infinite; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at 30% 30%, #3b82f6, #1e3a8a); flex-shrink: 0; }
-    @keyframes spin-globe { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    .nav-links { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+    
+    .top-bar-blue { background: var(--primary-blue); color: #ffffff; padding: 0.6rem 1.5rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 9999; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .brand-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #ffffff; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.5px; }
+    .brand-logo img { width: 34px; height: 34px; object-fit: contain; border-radius: 50%; }
+    
+    .nav-links { display: flex; align-items: center; gap: 1.2rem; }
     .nav-links a { color: #e0e7ff; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: #ffffff; }
-    .header-actions { display: flex; align-items: center; gap: 0.75rem; }
-    .btn-seguir { background: var(--accent-blue); color: #fff; border: none; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
-    .search-box { position: relative; display: flex; align-items: center; }
-    .search-box input { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); padding: 0.35rem 0.6rem 0.35rem 2rem; border-radius: 4px; color: #fff; font-size: 0.8rem; outline: none; width: 140px; }
-    .search-box input::placeholder { color: #cbd5e1; }
-    .search-box svg { position: absolute; left: 6px; fill: #cbd5e1; width: 14px; height: 14px; pointer-events: none; }
+    
+    .menu-toggle { display: none; background: none; border: none; cursor: pointer; color: #ffffff; font-size: 1.4rem; padding: 4px; }
+
     .ticker-wrapper { background: var(--ticker-bg); overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--border-color); height: 34px; display: flex; align-items: center; }
     .ticker-move { display: inline-block; white-space: nowrap; animation: ticker-scroll 45s linear infinite; }
     .ticker-move:hover { animation-play-state: paused; }
@@ -44,86 +39,75 @@
     .ticker-up { color: #10b981; font-weight: 600; }
     .ticker-down { color: #ef4444; font-weight: 600; }
     @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .ads-banner-leaderboard { max-width: 1240px; margin: 1.25rem auto; min-height: 90px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; padding: 10px; }
-    .ads-banner-infeed { max-width: 1240px; margin: 2.5rem auto; min-height: 180px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; }
+
+    @media (max-width: 900px) {
+      .menu-toggle { display: block; }
+      .nav-links { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background: var(--primary-blue); 
+        flex-direction: column; 
+        padding: 1rem 1.5rem; 
+        gap: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      }
+      .nav-links.active { display: flex; }
+      .nav-links a { margin-right: 0; font-size: 1rem; width: 100%; padding: 0.3rem 0; }
+    }
+
+    .ads-banner-leaderboard { max-width: 1240px; margin: 1.25rem auto; min-height: 90px; background: var(--ads-bg); border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.78rem; border-radius: 6px; }
     .container-home { max-width: 1240px; margin: 1rem auto; padding: 0 1rem; }
-    .grid-hero { display: grid; grid-template-columns: 2.2fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); }
-    .hero-main { background: var(--card-bg); border-radius: 8px; overflow: hidden; padding: 1.5rem; border: 1px solid var(--border-color); }
-    .hero-main img { width: 100%; height: 380px; object-fit: cover; border-radius: 6px; margin-bottom: 1rem; }
+    .grid-hero { display: grid; grid-template-columns: 2.2fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem; }
+    .hero-main { background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); padding: 1.5rem; }
     .hero-tag { color: var(--accent-blue); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
     .titulo-materia { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--primary-blue); margin: 0.5rem 0; line-height: 1.25; }
-    .meta-data { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); }
-    .credito-img { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; margin-bottom: 1.5rem; }
+    .meta-data { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
     article { font-size: 1.05rem; color: var(--text-main); line-height: 1.6; }
     article p { margin-bottom: 1.25rem; }
     article h2 { color: var(--primary-blue); margin: 1.5rem 0 0.75rem 0; font-size: 1.35rem; }
     .sidebar-ultimas { border-left: 1px solid var(--border-color); padding-left: 1.25rem; }
     .sidebar-title { font-size: 1rem; font-weight: 800; color: var(--accent-blue); text-transform: uppercase; border-bottom: 2px solid var(--accent-blue); padding-bottom: 0.3rem; margin-bottom: 1rem; }
     .sidebar-item { margin-bottom: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border-color); }
-    .sidebar-item:last-child { border-bottom: none; }
-    .sidebar-item h4 { font-size: 0.9rem; line-height: 1.35; }
     .sidebar-item h4 a { text-decoration: none; color: var(--text-main); }
     .editoria-section { margin-bottom: 3rem; }
-    .section-header { font-size: 1.25rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 1rem; border-left: 4px solid var(--accent-blue); padding-left: 0.6rem; display: flex; justify-content: space-between; align-items: center; }
-    .section-header a { font-size: 0.8rem; color: var(--accent-blue); text-decoration: none; }
+    .section-header { font-size: 1.25rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 1rem; border-left: 4px solid var(--accent-blue); padding-left: 0.6rem; display: flex; justify-content: space-between; }
     .grid-4-colunas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
-    .card-materia { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+    .card-materia { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
     .card-materia img { width: 100%; height: 150px; object-fit: cover; }
-    .card-body { padding: 0.85rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .card-body h3 { font-size: 0.9rem; font-weight: 700; line-height: 1.35; margin-top: 0.3rem; }
-    .card-body h3 a { text-decoration: none; color: var(--text-main); }
-    footer { background: var(--primary-blue); color: #94a3b8; padding: 2.5rem 1rem 1.5rem 1rem; margin-top: 3rem; border-top: 4px solid var(--accent-blue); }
-    .footer-container { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .footer-brand p { font-size: 0.82rem; line-height: 1.5; color: #cbd5e1; margin-top: 0.4rem; }
-    .footer-col h5 { color: #ffffff; font-size: 0.9rem; margin-bottom: 0.8rem; text-transform: uppercase; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 0.4rem; }
-    .footer-col ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.82rem; }
-    .footer-bottom { max-width: 1240px; margin: 1.25rem auto 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: #94a3b8; }
-    @media (max-width: 900px) {
-      .top-bar-blue { flex-direction: column; align-items: flex-start; }
-      .grid-hero { grid-template-columns: 1fr; }
-      .sidebar-ultimas { border-left: none; padding-left: 0; margin-top: 1rem; }
-      .grid-4-colunas { grid-template-columns: repeat(2, 1fr); }
-      .footer-container { grid-template-columns: 1fr; }
-    }
+    .card-body { padding: 0.85rem; }
+    .card-body h3 a { text-decoration: none; color: var(--text-main); font-size: 0.9rem; font-weight: 700; }
+    footer { background: var(--primary-blue); color: #94a3b8; padding: 2.5rem 1rem 1.5rem 1rem; margin-top: 3rem; }
+    @media (max-width: 900px) { .grid-hero { grid-template-columns: 1fr; } .grid-4-colunas { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) { .grid-4-colunas { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <div class="header-estatico-container">
-    <header class="top-bar-blue">
-      <div class="brand-container">
-        <a href="/" class="brand-logo">
-          <div class="rotating-globe"></div>
-          <span>Polo Econômico</span>
-        </a>
-        <span class="brand-slogan">Informações que moldam o país, a economia e o seu futuro.</span>
-      </div>
-      <nav class="nav-links">
-        <a href="/economia/">Economia</a>
-        <a href="/automotivo/">Automotivo</a>
-        <a href="/politica/">Política</a>
-        <a href="/esportes/">Esportes</a>
-        <a href="/tecnologia/">Tecnologia</a>
-      </nav>
-      <div class="header-actions">
-        <button class="btn-seguir" onclick="favoritarSite()">★ Seguir</button>
-        <div class="search-box">
-          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          <input type="text" placeholder="Buscar...">
-        </div>
-      </div>
-    </header>
-    <div class="ticker-wrapper">
-      <div class="ticker-move">
-        <span class="ticker-item"><span class="ticker-symbol">IBOV</span> <span class="ticker-val">128.450</span> <span class="ticker-up">+0,75%</span></span>
-        <span class="ticker-item"><span class="ticker-symbol">PETR4</span> <span class="ticker-val">R$ 38,20</span> <span class="ticker-up">+1,12%</span></span>
-        <span class="ticker-item"><span class="ticker-symbol">VALE3</span> <span class="ticker-val">R$ 62,15</span> <span class="ticker-down">-0,45%</span></span>
-        <span class="ticker-item"><span class="ticker-symbol">USDBRL</span> <span class="ticker-val">R$ 5,42</span> <span class="ticker-up">+0,22%</span></span>
-        <span class="ticker-item"><span class="ticker-symbol">S&P 500</span> <span class="ticker-val">5.815 pts</span> <span class="ticker-up">+0,40%</span></span>
-        <span class="ticker-item"><span class="ticker-symbol">BITCOIN</span> <span class="ticker-val">US$ 68.450</span> <span class="ticker-up">+2,15%</span></span>
-      </div>
+  <header class="top-bar-blue">
+    <a href="/" class="brand-logo">
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=100" alt="Logo Polo Econômico">
+      <span>Polo Econômico</span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">&#9776;</button>
+    <nav class="nav-links">
+      <a href="/economia/">Economia</a>
+      <a href="/automotivo/">Automotivo</a>
+      <a href="/politica/">Política</a>
+      <a href="/esportes/">Esportes</a>
+      <a href="/tecnologia/">Tecnologia</a>
+    </nav>
+  </header>
+  <div class="ticker-wrapper">
+    <div class="ticker-move">
+      <span class="ticker-item"><span class="ticker-symbol">IBOV</span> <span class="ticker-val">128.450</span> <span class="ticker-up">+0,75%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">PETR4</span> <span class="ticker-val">R$ 38,20</span> <span class="ticker-up">+1,12%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">VALE3</span> <span class="ticker-val">R$ 62,15</span> <span class="ticker-down">-0,45%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">USDBRL</span> <span class="ticker-val">R$ 5,42</span> <span class="ticker-up">+0,22%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">S&P 500</span> <span class="ticker-val">5.815 pts</span> <span class="ticker-up">+0,40%</span></span>
+      <span class="ticker-item"><span class="ticker-symbol">BITCOIN</span> <span class="ticker-val">US$ 68.450</span> <span class="ticker-up">+2,15%</span></span>
     </div>
   </div>
 
@@ -131,12 +115,12 @@
 
   <main class="container-home">
     <section class="grid-hero">
-      <div class="hero-main">
-        <span class="hero-tag">Economia & Negócios &bull; Finanças e Legislação</span>
+      <div class="hero-main" style="padding: 1.5rem;">
+        <span class="hero-tag">Economia & Negócios &bull; Geral</span>
         <h1 class="titulo-materia">Novas regras para vales-alimentação e refeição entram em vigor; entenda o que muda</h1>
-        <div class="meta-data">Por Redação Polo Econômico | Revisão Técnica: Equipe Editorial | Publicado em: 02 de November, 2026 às 05h11 GMT-3</div>
-        <img src="https://images.unsplash.com/photo-1728044849236-5e8a061e1895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE5NjgwfDB8MXxzZWFyY2h8MXx8Zm9vZCUyMHBheW1lbnQlMjBjYXJkfGVufDB8MHx8fDE3OTM2MDcwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Novas regras para vales-alimentação e refeição entram em vigor; entenda o que muda">
-        <p class="credito-img">Foto: Unsplash / Licença Gratuita</p>
+        <div class="meta-data">Por Redação Polo Econômico | Publicado em: 02 de November, 2026 às 05h11 GMT-3</div>
+        <img src="https://images.unsplash.com/photo-1728044849236-5e8a061e1895?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTE5NjgwfDB8MXxzZWFyY2h8MXx8Zm9vZCUyMHBheW1lbnQlMjBjYXJkfGVufDB8MHx8fDE3OTM2MDcwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Novas regras para vales-alimentação e refeição entram em vigor; entenda o que muda" style="width:100%; height:380px; object-fit:cover; border-radius:6px;">
+        <p class="credito-img" style="font-size:0.75rem; color:#6b7280; margin-top:4px;">Foto: Polo Econômico</p>
         <article><p>SÃO PAULO (Reuters) - O mercado brasileiro de benefícios ao trabalhador, que movimenta mais de R$ 150 bilhões ao ano, atinge um ponto de inflexão regulatória a partir deste dia 7. Entram em vigor diretrizes complementares ao arcabouço do Programa de Alimentação do Trabalhador (PAT), consolidando mudanças estruturais desenhadas pela Lei nº 14.442/2022 e decretos regulamentadores. A transição reconfigura a relação comercial entre emissoras de cartões, empresas contratantes, estabelecimentos comerciais e os próprios beneficiários de vales-alimentação (VA) e vales-refeição (VR).</p>
 
 <p>A nova etapa normativa mira dois pilares centrais: o aperto no controle sobre a finalidade dos gastos e a eliminação de assimetrias concorrenciais construídas ao longo de décadas no setor. Historicamente dominado por um oligopólio tradicional de operadoras, o segmento agora enfrenta restrições definitivas a práticas financeiras controversas e abre espaço para a consolidação de fintechs de benefícios flexíveis.</p>
@@ -166,111 +150,18 @@
 
 <p>Para os trabalhadores, a mudança assegura a blindagem do poder aquisitivo do benefício. Ao mitigar custos excessivos repassados pelos comerciantes aos preços das refeições e viabilizar a livre circulação de bandeiras nos estabelecimentos, o novo desenho do PAT busca assegurar seu propósito macroeconômico original: garantir a segurança alimentar da mão de obra formal sem transferir custos ocultos à inflação do setor de serviços.</p></article>
       </div>
-
       <div class="sidebar-ultimas">
         <h3 class="sidebar-title">Últimas Notícias</h3>
-        <div class="sidebar-item"><span class="hero-tag">Política</span><h4><a href="#">Ação Popular na Justiça analisa regras de remuneração pública no STF</a></h4></div>
-        <div class="sidebar-item"><span class="hero-tag">Tecnologia</span><h4><a href="#">Avanços em inteligência artificial transformam automação de empresas em 2026</a></h4></div>
-        <div class="sidebar-item"><span class="hero-tag">Automotivo</span><h4><a href="#">Vendas de veículos elétricos e híbridos registram alta recorde no país</a></h4></div>
-      </div>
-    </section>
-
-    <section class="editoria-section">
-      <div class="section-header"><span>1. Economia & Negócios</span><a href="/economia/">Ver tudo &rarr;</a></div>
-      <div class="grid-4-colunas">
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400" alt="News"><div class="card-body"><span class="hero-tag">Mercados</span><h3><a href="#">S&P 500 mantém estabilidade com foco em balanços de tecnologia</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400" alt="News"><div class="card-body"><span class="hero-tag">Bolsa</span><h3><a href="#">Ibovespa fecha em alta impulsionado por ações do setor financeiro</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400" alt="News"><div class="card-body"><span class="hero-tag">Câmbio</span><h3><a href="#">Dólar opera em leve oscilação com dados de emprego nos EUA</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=400" alt="News"><div class="card-body"><span class="hero-tag">Cripto</span><h3><a href="#">Bitcoin renova máxima do trimestre com fluxo institucional</a></h3></div></div>
-      </div>
-    </section>
-
-    <section class="editoria-section">
-      <div class="section-header"><span>2. Automotivo & Mobilidade</span><a href="/automotivo/">Ver tudo &rarr;</a></div>
-      <div class="grid-4-colunas">
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400" alt="News"><div class="card-body"><span class="hero-tag">EVs</span><h3><a href="#">Mercado de carros elétricos expande infraestrutura de recarga nacional</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400" alt="News"><div class="card-body"><span class="hero-tag">Indústria</span><h3><a href="#">Montadoras anunciam novos aportes para produção local de híbridos</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400" alt="News"><div class="card-body"><span class="hero-tag">Tecnologia</span><h3><a href="#">Sistemas de condução autônoma ganham novas certificações de segurança</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=400" alt="News"><div class="card-body"><span class="hero-tag">Mercado</span><h3><a href="#">Vendas de veículos seminovos crescem com demanda do setor logístico</a></h3></div></div>
-      </div>
-    </section>
-
-    <div class="ads-banner-infeed">[ ESPAÇO PUBLICITÁRIO - GOOGLE ADSENSE RESPONSIVO IN-FEED ]</div>
-
-    <section class="editoria-section">
-      <div class="section-header"><span>3. Política, Governo & Sociedade</span><a href="/politica/">Ver tudo &rarr;</a></div>
-      <div class="grid-4-colunas">
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=400" alt="News"><div class="card-body"><span class="hero-tag">Congresso</span><h3><a href="#">Reforma tributária avança em novas regulamentações setoriais</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=400" alt="News"><div class="card-body"><span class="hero-tag">STF</span><h3><a href="#">Decisão sobre precedentes fiscais afeta grandes contribuintes</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400" alt="News"><div class="card-body"><span class="hero-tag">Global</span><h3><a href="#">Acordo comercial bilateral é assinado em cúpula internacional</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400" alt="News"><div class="card-body"><span class="hero-tag">Gestão</span><h3><a href="#">Investimentos em infraestrutura urbana são anunciados pelo governo</a></h3></div></div>
-      </div>
-    </section>
-
-    <section class="editoria-section">
-      <div class="section-header"><span>4. Esportes & Gestão Esportiva</span><a href="/esportes/">Ver tudo &rarr;</a></div>
-      <div class="grid-4-colunas">
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?w=400" alt="News"><div class="card-body"><span class="hero-tag">Mídia</span><h3><a href="#">Direitos de transmissão esportiva batem recorde de faturamento</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400" alt="News"><div class="card-body"><span class="hero-tag">Negócios</span><h3><a href="#">Gestão de clubes esportivos atrai fundos de investimento privado</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400" alt="News"><div class="card-body"><span class="hero-tag">Patrocínio</span><h3><a href="#">Grandes marcas expandem investimento em ligas de alta performance</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=400" alt="News"><div class="card-body"><span class="hero-tag">Internacional</span><h3><a href="#">Calendário de torneios mundiais movimenta economia do turismo</a></h3></div></div>
-      </div>
-    </section>
-
-    <section class="editoria-section">
-      <div class="section-header"><span>5. Tecnologia & Inovação</span><a href="/tecnologia/">Ver tudo &rarr;</a></div>
-      <div class="grid-4-colunas">
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400" alt="News"><div class="card-body"><span class="hero-tag">Inovação</span><h3><a href="#">Computação quântica atinge novo marco em testes comerciais</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400" alt="News"><div class="card-body"><span class="hero-tag">Segurança</span><h3><a href="#">Novos protocolos de criptografia protegem redes corporativas</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400" alt="News"><div class="card-body"><span class="hero-tag">Jamstack</span><h3><a href="#">Arquiteturas serverless aceleram performance no ecossistema web</a></h3></div></div>
-        <div class="card-materia"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400" alt="News"><div class="card-body"><span class="hero-tag">IA</span><h3><a href="#">Modelos multimodais transformam a curadoria de notícias online</a></h3></div></div>
+        <div class="sidebar-item"><span class="hero-tag">Economia</span><h4><a href="/economia/">Acompanhe as cotações e análises de mercado em tempo real</a></h4></div>
+        <div class="sidebar-item"><span class="hero-tag">Tecnologia</span><h4><a href="/tecnologia/">Inovações e tendências que transformam os negócios</a></h4></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-container">
-      <div class="footer-brand">
-        <strong style="color:#fff; font-size:1.25rem; display:block; margin-bottom:0.3rem;">Polo Econômico</strong>
-        <p>Informações que moldam o país, a economia e o seu futuro.</p>
-        <p style="margin-top:0.8rem; font-size:0.78rem; color:#94a3b8;">O Polo Econômico é um portal independente dedicado a cobrir os fatos mais relevantes sobre mercados, governo, tecnologia, mobilidade e esportes.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Editorias</h5>
-        <ul>
-          <li><a href="/economia/">Economia</a></li>
-          <li><a href="/automotivo/">Automotivo</a></li>
-          <li><a href="/politica/">Política</a></li>
-          <li><a href="/esportes/">Esportes</a></li>
-          <li><a href="/tecnologia/">Tecnologia</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Institucional</h5>
-        <ul>
-          <li><a href="/sobre-nos.html">Sobre Nós</a></li>
-          <li><a href="/contato.html">Fale Conosco</a></li>
-          <li><a href="/expediente.html">Expediente</a></li>
-          <li><a href="/anuncie.html">Anuncie</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Legal & Transparência</h5>
-        <ul>
-          <li><a href="/politica-de-privacidade.html">Política de Privacidade</a></li>
-          <li><a href="/termos-de-uso.html">Termos de Uso</a></li>
-          <li><a href="/sitemap.xml">Mapa do Site (Sitemap)</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
+    <div style="max-width:1240px; margin:0 auto; text-align:center; font-size:0.85rem; color:#cbd5e1;">
       <p>&copy; 2026 Polo Econômico. Todos os direitos reservados.</p>
     </div>
   </footer>
-  <script>
-    function favoritarSite() {
-      alert('Pressione ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + ' + D para favoritar o Polo Econômico!');
-    }
-  </script>
 </body>
 </html>
